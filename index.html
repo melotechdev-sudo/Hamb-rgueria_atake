@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brasa &amp; Pão: hamburgueria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff7e0; --hero:#f6c324; --ink:#2b1710; --muted:#6b4f43; --red:#d62828; --green:#4f7a2c; --line:#e6d6a8; --onred:#fff;
+  --font:"Archivo","Segoe UI",system-ui,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#1d110c; --hero:#f6c324; --ink:#fbeccd; --muted:#c9ad9c; --red:#ff5a4d; --green:#8fbf5a; --line:#3d2a21}
+}
+:root[data-theme="dark"]{--bg:#1d110c; --hero:#f6c324; --ink:#fbeccd; --muted:#c9ad9c; --red:#ff5a4d; --green:#8fbf5a; --line:#3d2a21}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55;font-size:17px}
+.hero{background:var(--hero);color:#2b1710;padding:44px 22px 36px}
+.wrap{max-width:760px;margin:0 auto}
+.brand{font-weight:900;font-size:1.1rem}
+h1{font-weight:900;font-size:clamp(2.8rem,12vw,5.4rem);line-height:.95;letter-spacing:-.035em;margin:26px 0 16px}
+.hero p{font-size:1.2rem;max-width:26em;margin:0 0 24px}
+.btn{display:inline-block;background:var(--red);color:var(--onred);text-decoration:none;font-weight:900;padding:14px 26px;border-radius:999px}
+.btn:focus-visible{outline:3px solid #2b1710;outline-offset:3px}
+.burger{width:150px;margin:30px 0 0;display:flex;flex-direction:column;gap:3px}
+.burger i{display:block;height:16px;border-radius:12px}
+.b1{background:#c4721f;height:30px!important;border-radius:70px 70px 10px 10px!important}
+.b2{background:#4f7a2c}.b3{background:#fff2a8;height:9px!important}.b4{background:#5a2d1c;height:20px!important}
+.b5{background:#c4721f;height:18px!important;border-radius:10px 10px 30px 30px!important}
+main{max-width:760px;margin:0 auto;padding:12px 22px 56px}
+h2{font-weight:900;font-size:1.9rem;letter-spacing:-.02em;margin:44px 0 6px}
+.sub{color:var(--muted);margin:0 0 14px}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 18px;padding:16px 0;border-top:1px solid var(--line)}
+.item h3{margin:0;font-size:1.2rem;font-weight:900}
+.item p{grid-column:1;margin:0;color:var(--muted)}
+.price{grid-row:1;grid-column:2;font-weight:900;color:var(--red);font-size:1.2rem}
+.tag{display:inline-block;background:var(--green);color:#fff;font-size:.78rem;font-weight:600;padding:1px 9px;border-radius:99px;margin-left:8px;vertical-align:2px}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:10px}
+.info h3{margin:0 0 4px;font-size:1.05rem}
+.info p{margin:0;color:var(--muted)}
+footer{padding:24px 22px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">Brasa &amp; Pão</div>
+    <h1>Smash burger na chapa, do jeito certo.</h1>
+    <p>Pão macio, carne prensada na hora e queijo derretido. Peça pelo WhatsApp e retire ou receba em casa.</p>
+    <a class="btn" href="https://wa.me/5511900000000">Pedir pelo WhatsApp</a>
+    <div class="burger" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i></div>
+  </div>
+</header>
+
+<main>
+  <h2>Cardápio</h2>
+  <p class="sub">Todos os burgers acompanham pão brioche e molho da casa.</p>
+
+  <div class="item"><h3>Clássico<span class="tag">mais pedido</span></h3><span class="price">R$ 28</span><p>Carne 100 g, queijo prato, alface e tomate.</p></div>
+  <div class="item"><h3>Duplo Cheddar</h3><span class="price">R$ 36</span><p>Duas carnes de 80 g, cheddar cremoso e cebola caramelizada.</p></div>
+  <div class="item"><h3>Bacon Brasa</h3><span class="price">R$ 34</span><p>Carne 120 g, bacon crocante, queijo e maionese defumada.</p></div>
+  <div class="item"><h3>Frango Crocante</h3><span class="price">R$ 30</span><p>Filé empanado, alface, picles e molho de mostarda e mel.</p></div>
+  <div class="item"><h3>Veggie</h3><span class="price">R$ 29</span><p>Hambúrguer de grão-de-bico, queijo, rúcula e tomate seco.</p></div>
+
+  <h2>Para acompanhar</h2>
+  <div class="item"><h3>Batata frita</h3><span class="price">R$ 14</span><p>Porção individual, com sal e páprica.</p></div>
+  <div class="item"><h3>Onion rings</h3><span class="price">R$ 16</span><p>Anéis de cebola empanados e sequinhos.</p></div>
+  <div class="item"><h3>Milkshake</h3><span class="price">R$ 18</span><p>Chocolate, morango ou baunilha.</p></div>
+
+  <h2>Onde e quando</h2>
+  <div class="info">
+    <div><h3>Endereço</h3><p>Rua das Brasas, 123<br>Centro</p></div>
+    <div><h3>Horário</h3><p>Terça a domingo<br>18h às 23h</p></div>
+    <div><h3>Pedidos</h3><p>WhatsApp (11) 90000-0000</p></div>
+  </div>
+</main>
+<footer>© Brasa &amp; Pão. Preços e horários de exemplo.</footer>
+</body>
+</html>
